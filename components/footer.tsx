@@ -140,7 +140,7 @@ export default function Footer() {
                 <p className="text-sm text-muted-foreground">{t("passionateAbout")}</p>
                 <div className="flex gap-3 mt-2">
                   <Link
-                    href="https://github.com/isuru-jayanada"
+                    href="https://github.com/IzuuCode"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-full bg-white/80 dark:bg-slate-800/80 hover:bg-sky-100 dark:hover:bg-sky-900/30 transition-colors shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
@@ -149,7 +149,7 @@ export default function Footer() {
                     <Github className="h-4 w-4 text-foreground" />
                   </Link>
                   <Link
-                    href="mailto:contact@example.com"
+                    href="mailto:isurujayanada2002@gmail.com"
                     className="p-2.5 rounded-full bg-white/80 dark:bg-slate-800/80 hover:bg-sky-100 dark:hover:bg-sky-900/30 transition-colors shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
                     aria-label="Email"
                   >
