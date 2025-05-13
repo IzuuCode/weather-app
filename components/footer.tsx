@@ -160,9 +160,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-full bg-white/80 dark:bg-slate-800/80 hover:bg-sky-100 dark:hover:bg-sky-900/30 transition-colors shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
-                    aria-label="LinkedIN profile"
+                    aria-label="Linkedin profile"
                   >
-                    <Twitter className="h-4 w-4 text-foreground" />
+                    <Linkedin className="h-4 w-4 text-foreground" />
                   </Link>
                 </div>
               </div>
