@@ -156,11 +156,11 @@ export default function Footer() {
                     <Mail className="h-4 w-4 text-foreground" />
                   </Link>
                   <Link
-                    href="https://twitter.com"
+                    href="https://www.linkedin.com/in/isuru-jayanada-044738265/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-full bg-white/80 dark:bg-slate-800/80 hover:bg-sky-100 dark:hover:bg-sky-900/30 transition-colors shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
-                    aria-label="Twitter Profile"
+                    aria-label="LinkedIN profile"
                   >
                     <Twitter className="h-4 w-4 text-foreground" />
                   </Link>
