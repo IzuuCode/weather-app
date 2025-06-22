@@ -21,6 +21,11 @@ A modern, responsive weather web application that fetches real-time weather data
 - **Axios / Fetch API** – For making API calls
 - **Geolocation API** – For detecting user’s current location
 
+
+---
+
+Contact Me [ isurujayanada2002@gmail.com ]
+
 ## 🖼️ Demo
 
 *Live Preview = [ https://weather-app-iota-ochre-61.vercel.app/ ]
