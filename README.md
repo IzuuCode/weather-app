@@ -24,7 +24,8 @@ A modern, responsive weather web application that fetches real-time weather data
 
 ---
 
-Contact Me [ isurujayanada2002@gmail.com ]
+Contact Me [ isurujayanada2002@gmail.com ]|
+Linked IN [ https://www.linkedin.com/in/isuru-jayanada-044738265/]
 
 ## 🖼️ Demo
 
