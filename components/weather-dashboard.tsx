@@ -23,6 +23,7 @@ import {
   Compass,
   Zap,
   Youtube,
+  ExternalLink,
 } from "lucide-react"
 import WeatherCard from "./weather-card"
 import { generateWeatherData } from "@/lib/weather-data"
@@ -40,7 +41,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
-import YouTubePlayer from "./youtube-player"
+
 
 export default function WeatherDashboard() {
   // Theme toggle
@@ -302,11 +303,10 @@ export default function WeatherDashboard() {
 
           <Button
             variant={isFavorite ? "default" : "outline"}
-            className={`h-12 px-4 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all ${
-              isFavorite
-                ? "bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-500/20 dark:shadow-rose-500/10"
-                : "bg-white/80 dark:bg-slate-800/80 border-0"
-            }`}
+            className={`h-12 px-4 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all ${isFavorite
+              ? "bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-500/20 dark:shadow-rose-500/10"
+              : "bg-white/80 dark:bg-slate-800/80 border-0"
+              }`}
             onClick={toggleFavorite}
           >
             <Heart className={`h-4 w-4 ${isFavorite ? "fill-white" : "fill-none"}`} />
@@ -402,13 +402,6 @@ export default function WeatherDashboard() {
             <Sun className="h-4 w-4 mr-2" />
             {t("weather")}
           </TabsTrigger>
-          <TabsTrigger
-            value="videos"
-            className="flex-1 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-red-500 data-[state=active]:to-rose-500 data-[state=active]:text-white"
-          >
-            <Youtube className="h-4 w-4 mr-2" />
-            {t("videos")}
-          </TabsTrigger>
         </TabsList>
 
         {/* Weather Content */}
@@ -474,11 +467,10 @@ export default function WeatherDashboard() {
                         {weatherData.map((_, index) => (
                           <button
                             key={index}
-                            className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                              currentDayIndex === index
-                                ? "bg-gradient-to-r from-sky-500 to-indigo-500 scale-125 shadow-md"
-                                : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-                            }`}
+                            className={`h-3 w-3 rounded-full transition-all duration-300 ${currentDayIndex === index
+                              ? "bg-gradient-to-r from-sky-500 to-indigo-500 scale-125 shadow-md"
+                              : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                              }`}
                             onClick={() => setCurrentDayIndex(index)}
                             aria-label={`View ${index === 0 ? t("today") : `${index} ${t("daysAgo")}`}`}
                           />
@@ -519,7 +511,7 @@ export default function WeatherDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8"
           >
             <Card className="bg-gradient-to-br from-white to-sky-50 dark:from-slate-900 dark:to-slate-800 border-0 shadow-lg overflow-hidden rounded-xl">
               <CardContent className="p-6 flex items-center gap-4">
@@ -559,12 +551,29 @@ export default function WeatherDashboard() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
-        </TabsContent>
 
-        {/* Videos Content */}
-        <TabsContent value="videos" className="mt-0">
-          <YouTubePlayer location={location} />
+            <a
+              href="https://www.youtube.com/@Foxweather"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
+            >
+              <Card className="bg-gradient-to-br from-white to-sky-50 dark:from-slate-900 dark:to-slate-800 border-0 shadow-lg overflow-hidden rounded-xl hover:shadow-xl transition-shadow h-full cursor-pointer group">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full group-hover:bg-red-200 dark:group-hover:bg-red-800/40 transition-colors">
+                    <Youtube className="h-6 w-6 text-red-600 dark:text-red-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-sm text-muted-foreground">Weather News</h3>
+                    <p className="text-lg font-bold">Fox Weather</p>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1 group-hover:text-sky-500 transition-colors">
+                      Watch updates <ExternalLink className="h-3 w-3" />
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+          </motion.div>
         </TabsContent>
       </Tabs>
     </div>

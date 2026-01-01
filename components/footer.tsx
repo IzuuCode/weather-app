@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Heart, Mail, Twitter, ArrowUp, CloudLightning, CloudRain, Sun, Sparkles } from "lucide-react"
+import { Github, Heart, Mail, Twitter, ArrowUp, CloudLightning, CloudRain, Sun, Sparkles, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/components/language-provider"
@@ -195,7 +195,7 @@ export default function Footer() {
                 © {currentYear} Isuru Jayanada
               </span>
               <span className="mx-2">•</span>
-              {t("madeWith")} <Heart className="h-3.5 w-3.5 text-rose-500 fill-rose-500 mx-1" />
+
             </p>
           </motion.div>
         </motion.div>
