@@ -1,0 +1,34 @@
+﻿node.exe : npm warn 
+deprecated next@15.2.6: 
+This version has a security 
+vulnerability. Please 
+upgrade to a patched 
+version. See https://nextjs.
+org/blog/security-update-202
+5-12-11 for more details.
+At F:\installs\node 
+js\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS 
+$args
++   ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo          
+    : NotSpecified: (npm w  
+  arn deprec...r more det   
+ ails.:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+
+added 321 packages, and audited 322 packages in 1m
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
