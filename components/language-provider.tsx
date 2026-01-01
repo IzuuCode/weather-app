@@ -11,7 +11,7 @@ type Translations = {
   }
 }
 
-// Define all translations here
+// Define all translations here ok
 const translations: Translations = {
   en: {
     weatherForecast: "Weather Forecast",
