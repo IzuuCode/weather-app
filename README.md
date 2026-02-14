@@ -29,7 +29,7 @@ Linked IN [ https://www.linkedin.com/in/isuru-jayanada-044738265/]
 
 ## 🖼️ Demo
 
-*Live Preview = [ https://weather-app-iota-ochre-61.vercel.app/ ]
+*Live Preview = [ https://weather-app-iota-ochre-61.vercel.app/ ].
 
-*Is there any problem feel free to ask!! [  isurujayanada2002@gmail.com ]
+*Is there any problem feel free to ask!! [  isurujayanada2002@gmail.com ].
 
